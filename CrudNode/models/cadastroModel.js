@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const cadastroSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
     id: Number,
     Nome: String,
     Sobrenome: String,
@@ -12,4 +12,4 @@ const cadastroSchema = new mongoose.Schema({
     Status: Boolean
 });
 
-module.exports = mongoose.model('cadastro', cadastroSchema);
+module.exports = mongoose.model('users', userSchema);
