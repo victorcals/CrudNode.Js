@@ -18,12 +18,12 @@ router.get('/', function (req, res, next) {
 
 router.post('/cadastros', cadastroController.create);
 
-router.get('/cadastros', cadastroController.listeAll);
+// router.get('/cadastros', cadastroController.listeAll);
 
-router.get('/cadastros/:id', cadastroController.buscar);
+// router.get('/cadastros/:id', cadastroController.buscar);
 
-router.put('/cadastros/:id', cadastroController.update);
+// router.put('/cadastros/:id', cadastroController.update);
 
-router.delete('/cadastros/:id', cadastroController.delete);
+// router.delete('/cadastros/:id', cadastroController.delete);
 
 module.exports = router;

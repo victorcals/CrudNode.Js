@@ -2,14 +2,14 @@ const Cadastro = require('../models/cadastroModel');
 
 
 exports.create = (req, res) => {
-    const { Nome, Sobrenome, ano, Telefone, Endereço, Cidade, Estado, Status } = req.body;
+    const { Nome, Sobrenome, ano, Telefone, Endereco, Cidade, Estado, Status } = req.body;
 
     const novoCadastro = new Cadastro({
         Nome,
         Sobrenome,
         ano,
         Telefone,
-        Endereço,
+        Endereco,
         Cidade,
         Estado,
         Status
