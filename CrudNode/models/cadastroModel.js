@@ -2,14 +2,14 @@ const mongoose = require('mongoose');
 
 const cadastroSchema = new mongoose.Schema({
     id: Number,
-    Nome: String,
-    Sobrenome: String,
+    nome: String,
+    sobrenome: String,
     ano: Number,
-    Telefone: Number,
-    Endereço: String,
-    Cidade: String,
-    Estado: String,
-    Status: Boolean
+    telefone: Number,
+    endereco: String,
+    cidade: String,
+    estado: String,
+    status: Boolean
 });
 
 module.exports = mongoose.model('users', cadastroSchema);
