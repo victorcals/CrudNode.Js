@@ -12,4 +12,4 @@ const cadastroSchema = new mongoose.Schema({
     Status: Boolean
 });
 
-module.exports = mongoose.model('cadastro', cadastroSchema);
+module.exports = mongoose.model('users', cadastroSchema);

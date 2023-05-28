@@ -16,11 +16,11 @@ router.get('/', function (req, res, next) {
 // Listar usuários por Nome, Sobrenome, Cidade, Estado e Status.
 // Deletar um usuário (Deletar do banco)
 
-router.post('/cadastros', cadastroController.create);
+router.post('/cadastros', cadastroController.salvar);
 
-router.get('/cadastros', cadastroController.listeAll);
+router.get('/cadastros', cadastroController.listar);
 
-router.get('/cadastros/:id', cadastroController.buscar);
+router.get('/cadastros/:id', cadastroController.buscarPorId);
 
 router.put('/cadastros/:id', cadastroController.update);
 
