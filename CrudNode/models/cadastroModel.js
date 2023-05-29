@@ -2,14 +2,14 @@ const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
     id: Number,
-    Nome: String,
-    Sobrenome: String,
+    nome: String,
+    sobrenome: String,
     ano: Number,
-    Telefone: Number,
-    Endereço: String,
-    Cidade: String,
-    Estado: String,
-    Status: Boolean
+    telefone: Number,
+    endereço: String,
+    cidade: String,
+    estado: String,
+    status: Boolean
 });
 
 module.exports = mongoose.model('users', userSchema);
