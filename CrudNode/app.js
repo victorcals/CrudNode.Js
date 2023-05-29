@@ -7,9 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var cadastroRouter = require('./routes/cadastroRouter'); // Use o cadastroRouter em vez de usersRouter
 
-var app = express();
-
-// view engine setup
+var app = express();// view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
