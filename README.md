@@ -7,7 +7,7 @@
 :construction: 
 ```
 npm install
-
+node .\database\carregadados.js
 ```
 
  :construction:
@@ -15,8 +15,10 @@ npm install
 ## Compiles and hot-reloads for development
 
 ```
-nodemon app.js
+ npm start
 ```
+
+Observações o arquivo está rodando na   http://localhost:3003 e utilize o comando node .\database\carregadados.js para cadastar os usuário na base de dados 
 
 ### Desenvolvido por Guilherme Carlos e Victor Cals
 
