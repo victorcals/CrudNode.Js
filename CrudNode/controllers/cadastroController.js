@@ -1,22 +1,38 @@
-const Cadastro = require('../models/cadastroModel');
+const cadastroModel = require('../models/cadastroModel');
 
-exports.create = async (req, res) => {
-    try {
-        const { nome, sobrenome, ano, telefone, endereco, cidade, estado, status } = req.body;
-        const cadastro = new Cadastro({
-            nome,
-            sobrenome,
-            ano,
-            telefone,
-            endereco,
-            cidade,
-            estado,
-            status
-        });
-        await cadastro.save();
-        res.status(201).json({ message: 'Cadastro criado com sucesso' });
-    } catch (error) {
-        console.error('Erro ao criar cadastro:', error);
-        res.status(500).json({ message: 'Erro ao criar cadastrOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOo' });
+class CadastroController {
+    async salvar(req, res) {
+        let cadastro = req.body;
+        const max = await cadastroModel.findOne({}).sort({ id: -1 });
+        cadastro.id = max == null ? 1 : max.id + 1;
+        const resultado = await movieModel.create(cadastro);
+        res.status(201).json(resultado);
     }
-};
+
+    async listar(req, res) {
+        const resultado = await cadastroModel.find({});
+        res.status(200).json(resultado);
+    }
+
+    async buscarPorId(req, res) {
+        const id = req.params.id;
+        const resultado = await cadastroModel.findOne({ 'id': id });
+        res.status(200).json(resultado);
+    }
+
+    async atualizar(req, res) {
+        const id = req.params.id;
+        const _id = String((await cadastroModel.findOne({ 'id': id }))._id);
+        await cadastroModel.findByIdAndUpdate(String(_id), req.body);
+        res.status(200).send();
+    }
+
+    async excluir(req, res) {
+        const id = req.params.id;
+        const _id = String((await cadastroModel.findOne({ 'id': id }))._id);
+        await cadastroModel.findByIdAndRemove(String(_id));
+        res.status(200).send();
+    }
+}
+
+module.exports = new CadastroController();

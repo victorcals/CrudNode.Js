@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "nome": "Ana",
+        "sobrenome": "Silva",
+        "dataNascimento": "15/07/1990",
+        "telefone": 41111111111,
+        "endereco": "Rua das Palmeiras 456",
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "status": true
+    },
+    {
+        "id": 2,
+        "nome": "Pedro",
+        "sobrenome": "Santos",
+        "dataNascimento": "10/02/1988",
+        "telefone": 41111111111,
+        "endereco": "Avenida Principal 789",
+        "cidade": "São Paulo",
+        "estado": "SP",
+        "status": true
+    },
+    {
+        "id": 3,
+        "nome": "Luiz",
+        "sobrenome": "Eduardo Oku",
+        "dataNascimento": "20/12/1996",
+        "telefone": 41111111111,
+        "endereco": "Travessa São José 33",
+        "cidade": "Piraquara",
+        "estado": "PR",
+        "status": true
+    },
+    {
+        "id": 4,
+        "nome": "Maria",
+        "sobrenome": "Gomes",
+        "dataNascimento": "05/06/1985",
+        "telefone": 41111111111,
+        "endereco": "Avenida Central 456",
+        "cidade": "Rio de Janeiro",
+        "estado": "RJ",
+        "status": true
+    },
+    {
+        "id": 5,
+        "nome": "João",
+        "sobrenome": "Ferreira",
+        "dataNascimento": "03/09/1990",
+        "telefone": 41111111111,
+        "endereco": "Avenida das Flores 123",
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "status": true
+    }
+]
