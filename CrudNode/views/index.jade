@@ -3,16 +3,31 @@ extends layout
 block content
   h1= title
   div.login-box
-    form
+    form(action='/cadastro', method='POST')
+      h1 Esse Forms não está funcionando, realizar o cadastro via Postman
+      div.user-box
+
+
+           input(type='text', name='', required='')
+        label nome
       div.user-box
         input(type='text', name='', required='')
-        label Username
+        label sobrenome
       div.user-box
-        input(type='password', name='', required='')
-        label Password
-      div.user-box1
-        label Upload Image:
-        input(type='file', name='image')
+        input(type='number', name='', required='')
+        label telefone
+      div.user-box
+        input(type='text', name='', required='')
+        label endereco
+      div.user-box
+        input(type='text', name='', required='')
+        label cidade
+      div.user-box
+        input(type='text', name='', required='')
+        label estado
+      //- div.user-box1
+      //-   label Upload Image:
+      //-   input(type='file', name='image')
       center
         button(type='submit')
           | cadastro

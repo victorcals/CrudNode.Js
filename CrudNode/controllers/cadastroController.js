@@ -1,13 +1,14 @@
 const cadastroModel = require('../models/cadastroModel');
 
-class CadastroController {
+class cadastroController {
     async salvar(req, res) {
         let cadastro = req.body;
         const max = await cadastroModel.findOne({}).sort({ id: -1 });
         cadastro.id = max == null ? 1 : max.id + 1;
-        const resultado = await movieModel.create(cadastro);
+        const resultado = await cadastroModel.create(cadastro);
         res.status(201).json(resultado);
     }
+
 
     async listar(req, res) {
         const resultado = await cadastroModel.find({});
@@ -35,4 +36,4 @@ class CadastroController {
     }
 }
 
-module.exports = new CadastroController();
+module.exports = new cadastroController();
