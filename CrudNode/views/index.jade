@@ -2,4 +2,18 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  div.login-box
+    form
+      div.user-box
+        input(type='text', name='', required='')
+        label Username
+      div.user-box
+        input(type='password', name='', required='')
+        label Password
+      div.user-box1
+        label Upload Image:
+        input(type='file', name='image')
+      center
+        button(type='submit')
+          | cadastro
+          span
