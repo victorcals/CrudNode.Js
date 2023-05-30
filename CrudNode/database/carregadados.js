@@ -9,7 +9,7 @@ async function carregarDados() {
         for (const cadastro of cadastros) {
             await cadastroModel.create(cadastro);
         }
-        console.log("Carga de filmes feita!");
+        console.log("usuário cadastrado");
     } catch (err) {
         console.log(err);
     } finally {
