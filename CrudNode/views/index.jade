@@ -4,11 +4,9 @@ block content
   h1= title
   div.login-box
     form(action='/cadastro', method='POST')
-      h1 Esse Forms não está funcionando, realizar o cadastro via Postman
+     
       div.user-box
-
-
-           input(type='text', name='nome', required='')
+        input(type='text', name='nome', required='')
         label nome
       div.user-box
         input(type='text', name='sobrenome', required='')
@@ -25,9 +23,9 @@ block content
       div.user-box
         input(type='text', name='estado', required='')
         label estado
-      //- div.user-box1
-      //-   label Upload Image:
-      //-   input(type='file', name='image')
+       div.user-box1
+         label Upload Image:
+         input(type='file', name='image')
       center
         button(type='submit')
           | cadastro

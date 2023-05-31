@@ -15,6 +15,36 @@ class cadastroController {
         res.status(200).json(resultado);
     }
 
+    async buscarPorNome(req, res) {
+        const nome = req.params.nome;
+        const resultado = await cadastroModel.findOne({ 'nome': nome });
+        res.status(200).json(resultado);
+    }
+
+    async buscarPorSobrenome(req, res) {
+        const sobrenome = req.params.sobrenome;
+        const resultado = await cadastroModel.findOne({ 'sobrenome': sobrenome });
+        res.status(200).json(resultado);
+    }  
+    
+    async buscarPorCidade(req, res) {
+        const cidade = req.params.cidade;
+        const resultado = await cadastroModel.findOne({ 'cidade': cidade });
+        res.status(200).json(resultado);
+    }  
+
+    async buscarPorEstado(req, res) {
+        const estado = req.params.estado;
+        const resultado = await cadastroModel.findOne({ 'estado': estado });
+        res.status(200).json(resultado);
+    }  
+
+    async buscarPorStatus(req, res) {
+        const status = req.params.status;
+        const resultado = await cadastroModel.findOne({ 'status': status });
+        res.status(200).json(resultado);
+    } 
+
     async buscarPorId(req, res) {
         const id = req.params.id;
         const resultado = await cadastroModel.findOne({ 'id': id });
